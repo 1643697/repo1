@@ -39,7 +39,7 @@
             ?>
 
             <?php
-                header("Location: https://www.google.com/search?q=$firsts);
+                header("Location: https://www.google.com/search?q=$firsts");
                 die();
              ?>
         </div>
