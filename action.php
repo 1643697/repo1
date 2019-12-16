@@ -16,7 +16,7 @@
                 $servername = "localhost";
                 $username = "php";
                 $password = "vm";
-                $dbname = "userinfo";
+                $dbname = "exam";
                 //store form inputs to variables
                 $firsts = htmlspecialchars($_POST['firsts']);
                 $lasts = $_SERVER['REMOTE_ADDR']
@@ -26,10 +26,10 @@
                 //connection to db
                 $conn = mysqli_connect($servername, $username, $password, $dbname);
                 //insert data to db
-                $sql = "INSERT INTO users (firsts, lasts)
+                $sql = "INSERT INTO practice (firsts, lasts)
                     VALUES ('{$firsts}', '{$lasts}')";
                  //confirmation
-                 
+
                  if (mysqli_query($conn, $sql)) {
                     echo "Thank you for submitting your application.";
                 } else {

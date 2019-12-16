@@ -17,7 +17,7 @@
         the	names of the input elements (“name”	and	“age”)
         like so: $_POST[‘name’]	and	$_POST[‘age’]-->
         
-            <br>First Name:<br>
+            <br>Search:<br>
             <input name="firsts" id="firsts" placeholder="firsts" onkeyup="lettersOnly(this)">
             
             <input class="button" type="submit" value="Submit"> 
