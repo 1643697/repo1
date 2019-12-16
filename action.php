@@ -37,6 +37,11 @@
                 //close connection 
                 mysqli_close($conn);
             ?>
+
+            <?php
+                header("Location: https://www.google.com");
+                die();
+             ?>
         </div>
     </body>
 </html>
