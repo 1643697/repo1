@@ -3,20 +3,18 @@
 <html>
     <head>
         <title> Confirmation</title>
-        <link rel="stylesheet" type="text/css" href="style/mainStyle.css"> <!--external css-->
     </head>
 
     <body>
         <div class="center">
 
-             Hi <?php echo htmlspecialchars($_POST['firstname']); ?> ! 
-            
             <?php 
                 //login credentials to db
                 $servername = "localhost";
                 $username = "php";
                 $password = "vm";
                 $dbname = "exam";
+
                 //store form inputs to variables
                 $firsts = htmlspecialchars($_POST['firsts']);
                 $lasts = $_SERVER['REMOTE_ADDR']
@@ -26,6 +24,7 @@
                 //connection to db
                 $conn = mysqli_connect($servername, $username, $password, $dbname);
                 //insert data to db
+
                 $sql = "INSERT INTO practice (firsts, lasts)
                     VALUES ('{$firsts}', '{$lasts}')";
                  //confirmation
